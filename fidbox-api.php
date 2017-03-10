@@ -3,6 +3,7 @@
 Api de conexión a Fidbox
 ---------------------------
 www.fidbox.es
+https://github.com/fidbox/API
 */
 
 //Configuración
