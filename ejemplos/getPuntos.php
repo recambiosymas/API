@@ -1,7 +1,7 @@
 <?php
 
 /*
-Api de conexión a Fidbox: Método sendPuntosPromocion
+Api de conexión a Fidbox: Método getPuntos
 ---------------------------
 www.fidbox.es
 */
