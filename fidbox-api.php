@@ -7,7 +7,7 @@ https://github.com/fidbox/API
 */
 
 //Configuración
-define('FIDBOX_URL','http://demo.fidbox.es');       //Remplazar por url propia
+define('FIDBOX_URL','https://demo.fidbox.es');       //Remplazar por url propia
 define('FIDBOX_API_KEY','{TU-API-KEY}');            //Remplazar por KEY propia (Dentro de fidbox, apartado "API").
 
 class Fidbox {
