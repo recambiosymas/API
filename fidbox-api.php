@@ -44,10 +44,10 @@ class Fidbox {
         empresa -> string
         tipologia -> string
         categoria -> string
-        id_comercial -> integer
+        id_comercial -> integer (No necesario para cuentas Fidbox Lite y Fidbox Lite Mini)
         password -> obligatorio -> string
         notificar -> obligatorio -> bool (1|0)
-        credencial -> obligatorio -> enum (cliente|personal|comercial)
+        credencial -> obligatorio -> enum (cliente|personal|comercial) (No necesario para cuentas Fidbox Lite y Fidbox Lite Mini)
         */
 
         $method = 'sendUsuario';
