@@ -28,10 +28,10 @@ $response = $fidbox->sendUsuario(array(
     'empresa' => 'Empresa del cliente',
     'tipologia' => 'Tipología del cliente',
     'categoria' => 'Categoría del cliente',
-    'id_comercial' => '1',
+    'id_comercial' => '1', // No necesario para cuentas Fidbox Lite y Fidbox Lite Mini
     'password' => 'mi-pass-25',
     'notificar' => '1',
-    'credencial' => 'cliente'
+    'credencial' => 'cliente' // No necesario para cuentas Fidbox Lite y Fidbox Lite Mini
 ));
 
 //Imprimimos respuesta
