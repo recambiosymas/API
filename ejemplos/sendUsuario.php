@@ -1,26 +1,26 @@
 <?php
 
 /*
-Api de conexión a Fidbox: Método sendUsuario
+Api de conexión a Recambios y mas: Método sendUsuario
 ---------------------------
-www.fidbox.es
+www.recambios.com
 */
 
 //Incluimos clase
-include('../fidbox-api.php');
+include('../recambios-api.php');
 
 //Llamamos a clase
-$fidbox = new Fidbox();
+$rAPI = new RecambiosApi();
 
 //Activamos DEBUG: Se recibirán respuestas pero no se añadirán datos a la DB ni se enviarán notificaciones.
-$fidbox->debug = false; //"false" para produccion.
+$rAPI->debug = false; //"false" para produccion.
 
 //Creamos cliente en Fidbox
-$response = $fidbox->sendUsuario(array(
+$response = $rAPI->sendUsuario(array(
     'id_cliente' => '165',
     'nombre' => 'Alberto',
     'apellidos' => 'Fernandez',
-    'email' => 'alberto.fidbox.test@gmail.com',
+    'email' => 'alberto.test@gmail.com',
     'dni' => '1234567G',
     'movil' => '655239856',
     'delegacion' => 'Delegación del cliente',
@@ -28,10 +28,10 @@ $response = $fidbox->sendUsuario(array(
     'empresa' => 'Empresa del cliente',
     'tipologia' => 'Tipología del cliente',
     'categoria' => 'Categoría del cliente',
-    'id_comercial' => '1', // No necesario para cuentas Fidbox Lite y Fidbox Lite Mini
+    'id_comercial' => '1',
     'password' => 'mi-pass-25',
     'notificar' => '1',
-    'credencial' => 'cliente' // No necesario para cuentas Fidbox Lite y Fidbox Lite Mini
+    'credencial' => 'cliente'
 ));
 
 //Imprimimos respuesta
