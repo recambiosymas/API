@@ -7,7 +7,7 @@ www.recambiosymas.com
 */
 
 //Incluimos clase
-include('../fidbox-api.php');
+include('../recambios-api.php');
 
 //Llamamos a clase
 $rAPI = new RecambiosApi();
