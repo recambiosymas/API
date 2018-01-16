@@ -15,7 +15,7 @@ $rAPI = new RecambiosApi();
 //Activamos DEBUG: Se recibirán respuestas pero no se añadirán datos a la DB ni se enviarán notificaciones.
 $rAPI->debug = false; //"false" para produccion.
 
-//Creamos cliente en Fidbox
+//Creamos cliente en Recambios y mas
 $response = $rAPI->sendUsuario(array(
     'id_cliente' => '165',
     'nombre' => 'Alberto',
