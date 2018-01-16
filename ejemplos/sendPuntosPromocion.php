@@ -1,22 +1,22 @@
 <?php
 
 /*
-Api de conexión a Fidbox: Método sendPuntosPromocion
+Api de conexión a Recambios y mas: Método sendPuntosPromocion
 ---------------------------
-www.fidbox.es
+www.recambiosymas.com
 */
 
 //Incluimos clase
 include('../fidbox-api.php');
 
 //Llamamos a clase
-$fidbox = new Fidbox();
+$rAPI = new RecambiosApi();
 
 //Activamos DEBUG: Se recibirán respuestas pero no se añadirán datos a la DB ni se enviarán notificaciones.
-$fidbox->debug = false; //"false" para produccion.
+$rAPI->debug = false; //"false" para produccion.
 
 //Creamos puntos de promoción en Fidbox
-$response = $fidbox->sendPuntosPromocion(array(
+$response = $rAPI->sendPuntosPromocion(array(
     'id_cliente' => '165',
     'puntos' => '150',
     'comentario' => 'Puntos añadidos por compra de producto'
