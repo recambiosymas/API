@@ -1,22 +1,22 @@
 <?php
 
 /*
-Api de conexión a Fidbox: Método getPuntos
+Api de conexión a Recambios y mas: Método getPuntos
 ---------------------------
-www.fidbox.es
+www.recambiosymas.com
 */
 
 //Incluimos clase
-include('../fidbox-api.php');
+include('../recambios-api.php');
 
 //Llamamos a clase
-$fidbox = new Fidbox();
+$rAPI = new RecambiosApi();
 
 //Activamos DEBUG: Se recibirán respuestas pero no se añadirán datos a la DB ni se enviarán notificaciones.
-$fidbox->debug = false; //"false" para produccion.
+$rAPI->debug = false; //"false" para produccion.
 
 //Obtenemos puntos de un cliente desde Fidbox
-$response = $fidbox->getPuntos(array(
+$response = $rAPI->getPuntos(array(
     'id_cliente' => '165',
 ));
 
