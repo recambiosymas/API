@@ -15,7 +15,7 @@ $rAPI = new RecambiosApi();
 //Activamos DEBUG: Se recibirán respuestas pero no se añadirán datos a la DB ni se enviarán notificaciones.
 $rAPI->debug = false; //"false" para produccion.
 
-//Creamos puntos de promoción en Fidbox
+//Creamos puntos de promoción en Recambios y mas
 $response = $rAPI->sendPuntosPromocion(array(
     'id_cliente' => '165',
     'puntos' => '150',
