@@ -15,7 +15,7 @@ $rAPI = new RecambiosApi();
 //Activamos DEBUG: Se recibirán respuestas pero no se añadirán datos a la DB ni se enviarán notificaciones.
 $rAPI->debug = false; //"false" para produccion.
 
-//Creamos facturación en Fidbox
+//Creamos facturación en Recambios y mas
 $response = $rAPI->sendFacturacion(array(
     'id_cliente' => '165',
     'ct' => '10555', //Facturacion total
