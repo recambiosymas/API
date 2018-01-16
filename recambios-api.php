@@ -1,19 +1,18 @@
 <?php
 /*
-Api de conexión a Fidbox
+Api de conexión a Recambios y mas
 ---------------------------
-www.fidbox.es
-https://github.com/fidbox/API
+www.recambiosymas.com
+https://github.com/recambiosymas/API
 */
 
 //Configuración
-define('FIDBOX_URL','https://demo.fidbox.es');       //Remplazar por url propia
-define('FIDBOX_API_KEY','{TU-API-KEY}');            //Remplazar por KEY propia (Dentro de fidbox, apartado "API").
+define('API_KEY','{TU-API-KEY}');            //Remplazar por KEY propia (Dentro de Recambios y mas, apartado "API").
 
-class Fidbox {
+class RecambiosApi {
 
-    var $url     = FIDBOX_URL;
-    var $api_key = FIDBOX_API_KEY;
+    var $url     = 'http://www.recambiosymas.com';
+    var $api_key = API_KEY;
     var $debug   = false; //Configurar en "true" para realizar pruebas. Se recibirán respuestas pero no se añadirán datos a la DB ni se enviarán notificaciones.
 
     /*
@@ -44,10 +43,10 @@ class Fidbox {
         empresa -> string
         tipologia -> string
         categoria -> string
-        id_comercial -> integer (No necesario para cuentas Fidbox Lite y Fidbox Lite Mini)
+        id_comercial -> integer
         password -> obligatorio -> string
         notificar -> obligatorio -> bool (1|0)
-        credencial -> obligatorio -> enum (cliente|personal|comercial) (No necesario para cuentas Fidbox Lite y Fidbox Lite Mini)
+        credencial -> obligatorio -> enum (cliente|personal|comercial)
         */
 
         $method = 'sendUsuario';
@@ -127,8 +126,6 @@ class Fidbox {
         curl_close($ch);
         return $output;
     }
-
 }
-
 
 ?>
